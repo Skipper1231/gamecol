@@ -47,4 +47,20 @@ public:
         cout << name << " атакует " << enemy.getName() << " и наносит " << damage << " урона!\n";
     }
 };
+
+
+```
+## Класс врага, наследуется от класса Character
+```
+class Enemy : public Character {
+public:
+    Enemy() : Character("Враг", 100) {}
+
+    // Метод для атаки игрока
+    void attack(Character& player) {
+        int damage = rand() % 16 + 5; // Рандомный урон от 5 до 20
+        player.takeDamage(damage);
+        cout << "Враг атакует " << player.getName() << " и наносит " << damage << " урона!\n";
+    }
+}
 ```
