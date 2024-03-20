@@ -64,3 +64,16 @@ public:
     }
 }
 ```
+## Функция для очистки экрана
+```
+void clearScreen() {
+    cout << string(100, '\n');
+}
+```
+## Функция для вывода текущего здоровья игрока и врага
+```
+void printHealth(const Player& player, const Enemy& enemy) {
+    cout << "Здоровье " << player.getName() << ": " << player.getHealth() << endl;
+    cout << "Здоровье " << enemy.getName() << ": " << enemy.getHealth() << endl;
+}
+```
