@@ -34,3 +34,17 @@ public:
     }
 };
 ```
+## Наследуемый класс игрока от Character
+```
+class Player : public Character {
+public:
+    Player(const string& name) : Character(name, 100) {}
+
+    // Метод для атаки врага
+    void attack(Character& enemy) {
+        int damage = rand() % 21 + 10; // Рандомный урон от 10 до 30
+        enemy.takeDamage(damage);
+        cout << name << " атакует " << enemy.getName() << " и наносит " << damage << " урона!\n";
+    }
+};
+```
